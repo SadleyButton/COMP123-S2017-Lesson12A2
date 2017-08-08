@@ -9,23 +9,30 @@ using System.Windows.Forms;
  * Created: 08/03/2017
  * Modified: August 08, 2017
  * Student Number: 300280496
- * Description: Changed CalculatorForm to Spashform startup
- * Version 0.2 
+ * Description: Refactored Main to instantiate CalculatorForm object after Enabling Visual Styles.
+ * Version 0.3
  */
 
 namespace COMP123_S2017_Lesson12A2
 {
-    static class Program
+    public static class Program
     {
+        //FORM INSTANTIATION
+        public static CalculatorForm calculatorForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            calculatorForm = new CalculatorForm();
+
             Application.Run(new SplashForm());
+
         }
     }
 }

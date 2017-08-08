@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.WelcomeSplashLabel = new System.Windows.Forms.Label();
             this.CredentialsLabel = new System.Windows.Forms.Label();
+            this.WelcomeSplashLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,17 +58,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 418);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // WelcomeSplashLabel
-            // 
-            this.WelcomeSplashLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.WelcomeSplashLabel.AutoSize = true;
-            this.WelcomeSplashLabel.Location = new System.Drawing.Point(39, 141);
-            this.WelcomeSplashLabel.Name = "WelcomeSplashLabel";
-            this.WelcomeSplashLabel.Size = new System.Drawing.Size(201, 93);
-            this.WelcomeSplashLabel.TabIndex = 0;
-            this.WelcomeSplashLabel.Text = "Welcome to the Calculator Application";
-            this.WelcomeSplashLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // CredentialsLabel
             // 
             this.CredentialsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -80,6 +69,17 @@
             this.CredentialsLabel.TabIndex = 1;
             this.CredentialsLabel.Text = "Lesson12A2 - 300280496";
             this.CredentialsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // WelcomeSplashLabel
+            // 
+            this.WelcomeSplashLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.WelcomeSplashLabel.AutoSize = true;
+            this.WelcomeSplashLabel.Location = new System.Drawing.Point(39, 141);
+            this.WelcomeSplashLabel.Name = "WelcomeSplashLabel";
+            this.WelcomeSplashLabel.Size = new System.Drawing.Size(201, 93);
+            this.WelcomeSplashLabel.TabIndex = 0;
+            this.WelcomeSplashLabel.Text = "Welcome to the Calculator Application";
+            this.WelcomeSplashLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SplashForm
             // 
@@ -95,6 +95,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SplashForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

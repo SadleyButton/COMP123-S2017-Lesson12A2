@@ -12,14 +12,19 @@ using System.Windows.Forms;
  * Name: Bradley Sutton
  * Created: 08/08/2017
  * Student Number: 300280496
- * Description: SplashForm for the Calculator application
- * Version 0.1
+ * Description: Refactored the "Tick" event handler
+ * Version 0.2
  */
 
 namespace COMP123_S2017_Lesson12A2
 {
     public partial class SplashForm : Form
     {
+        //PROPERTIES
+        public CalculatorForm CalculatorForm
+        {
+            get { return Program.calculatorForm; }
+        }
         public SplashForm()
         {
             InitializeComponent();
@@ -32,10 +37,9 @@ namespace COMP123_S2017_Lesson12A2
         /// <param name="e"></param>
         private void SplashTimer_Tick(object sender, EventArgs e)
         {
-            CalculatorForm calulateForm = new CalculatorForm();
-            calulateForm.Show();
+            this.CalculatorForm.Show();
             this.Hide();
-            calulateForm.Enabled = false;
+            SplashTimer.Enabled = false;
         }
     }
 }

@@ -6,10 +6,11 @@ using System.Windows.Forms;
 
 /* 
  * Name: Bradley Sutton
- * Date: 08/03/2017
+ * Created: 08/03/2017
+ * Modified: August 08, 2017
  * Student Number: 300280496
- * Description: This is the Driver Class for a Calculator App using Windows Forms
- * Version 0.1 
+ * Description: Changed CalculatorForm to Spashform startup
+ * Version 0.2 
  */
 
 namespace COMP123_S2017_Lesson12A2
@@ -24,7 +25,7 @@ namespace COMP123_S2017_Lesson12A2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calculator());
+            Application.Run(new SplashForm());
         }
     }
 }

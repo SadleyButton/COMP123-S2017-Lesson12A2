@@ -14,8 +14,7 @@ using System.Windows.Forms;
  * Date: 08/03/2017
  * Student Number: 300280496
  * Description: This is the Calculator Form using Windows Forms
- * Version 0.5 - Added operand and result properties
- *             - Added Multiple Calculator methods
+ * Version 0.6 - Refactored for "Form Closing" event handler
  */
 
 namespace COMP123_S2017_Lesson12A2
@@ -294,6 +293,11 @@ namespace COMP123_S2017_Lesson12A2
         private void CalculatorForm_Load(object sender, EventArgs e)
         {
             this._clear();
+        }
+
+        private void CalculatorForm_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -15,7 +15,7 @@ using System.Windows.Forms;
  * Modified Date: 08/11/2017
  * Student Number: 300280496
  * Description: This is the Calculator Form using Windows Forms
- * Version 0.6 - Refactored for the multiply and division methods
+ * Version 0.6 - Refactored for the backspace button
  */
 
 namespace COMP123_S2017_Lesson12A2
@@ -201,7 +201,8 @@ namespace COMP123_S2017_Lesson12A2
                 case "=":
                     this._showResult(operand);
                     break;
-                case "⌫":
+                case "←":
+                    this._backspace(operand);
                     break;
                 case "±":
                     break;
@@ -211,6 +212,20 @@ namespace COMP123_S2017_Lesson12A2
             }
 
 
+        }
+
+        /// <summary>
+        /// This method removes a operand from the ResultTextBox and the OperandList
+        /// </summary>
+        /// <param name="operand"></param>
+        private void _backspace(double operand)
+        {
+            ResultTextBox.Text = ResultTextBox.Text.Remove(ResultTextBox.Text.Length - 1, 1);
+
+            if (ResultTextBox.Text == "")
+            {
+                ResultTextBox.Text = "0";
+            }
         }
 
         /// <summary>

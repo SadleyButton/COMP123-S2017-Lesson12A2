@@ -12,9 +12,10 @@ using System.Windows.Forms;
 /* 
  * Name: Bradley Sutton
  * Date: 08/03/2017
+ * Modified Date: 08/11/2017
  * Student Number: 300280496
  * Description: This is the Calculator Form using Windows Forms
- * Version 0.6 - Refactored for "Form Closing" event handler
+ * Version 0.6 - Refactored for the multiply and division methods
  */
 
 namespace COMP123_S2017_Lesson12A2
@@ -241,6 +242,12 @@ namespace COMP123_S2017_Lesson12A2
                         break;
                     case "-":
                         this.Result = this.OperandList[0] - this.OperandList[1];
+                        break;
+                    case "*":
+                        this.Result = this.OperandList[0] * this.OperandList[1];
+                        break;
+                    case "/":
+                        this.Result = this.OperandList[0] / this.OperandList[1];
                         break;
                 }
                 this.OperandList.Clear();
